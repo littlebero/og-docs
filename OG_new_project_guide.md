@@ -261,7 +261,7 @@ openclaw logs --limit 50 | grep "/api/chat"
 | `openclaw gateway stop` | BUG-R — LaunchAgent 해제 | `launchctl stop gui/$UID/ai.openclaw.gateway` |
 | `openclaw gateway restart` | 상태 꼬임 | launchctl stop → gateway start |
 | `openclaw config set` | BUG-S — LaunchAgent 자동 해제 | openclaw.json 직접 편집 |
-| `openclaw channels login telegram` | 작동 안 함 | `config set channels.telegram.botToken` |
+| `openclaw channels login telegram` | 작동 안 함 | `openclaw.json`에 `botToken` 직접 기재 |
 | 8B 이하 모델 agent work | contextWindow 부족 | 14B 이상 필수 |
 | SOUL.md 규칙 10개+ | 준수율 15% 이하 | 5개 이하로 압축 |
 | sessions_send에서 NO_REPLY | BUG-O — 무한 핑퐁 | REPLY_SKIP만 사용 |
